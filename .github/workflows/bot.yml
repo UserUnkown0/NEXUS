@@ -1,14 +1,14 @@
 name: Ejecutar bot manualmente
 
 on:
-  workflow_dispatch:  # Esto permite activarlo desde GitHub con un botón
+  workflow_dispatch:  # Ejecutarlo a mano
 
 jobs:
   run-bot:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Clonar repositorio
+    - name: Clonar el repositorio
       uses: actions/checkout@v3
 
     - name: Instalar Node.js
@@ -20,4 +20,4 @@ jobs:
       run: npm install
 
     - name: Ejecutar bot
-      run: node main.js  # Cambia aquí si el archivo principal es otro
+      run: node main.js
